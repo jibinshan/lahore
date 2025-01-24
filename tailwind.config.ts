@@ -10,7 +10,7 @@ export default {
         bebas_neue: ["BebasNeue", ...fontFamily.sans],
         knewave: ["Knewave", ...fontFamily.sans],
         crazydots: ['CrazyDots', ...fontFamily.sans],
-        sans: ["Inter", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",

@@ -6,6 +6,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SplitType from 'split-type';
 import { useEffect } from "react";
+import Image from "next/image";
 
 const OPTIONS: EmblaOptionsType = { loop: true };
 
@@ -88,12 +89,18 @@ const Special = ({ }) => {
     // };
   }, [])
   return (
-    <section className="relative flex h-full w-full justify-center bg-[#070707] overflow-x-hidden">
-      <div className="flex h-full w-full max-w-[1300px] flex-col items-center justify-center gap-4 py-12">
-        <h3 className="special-title uppercase -ml-[50px] font-jakarta text-[#FCB017] tracking-[6px]">Featured Menu</h3>
-        <h1 className="special-head max-w-[400px] md:max-w-[650px] text-center text-2xl md:text-5xl font-jakarta uppercase text-[#9A9A9A] md:tracking-[7px] md:leading-[60px]">
-          Discover our most popular dishes
-        </h1>
+    <section className="relative flex flex-col h-full w-full justify-center bg-[#f2a137] overflow-x-hidden">
+      <div className="flex h-full w-full flex-col items-center justify-center gap-4 py-12 px-4 md:px-[130px]">
+        <div className="w-full flex justify-between items-end">
+          <h1 className="special-head text-center md:text-start text-3xl md:text-7xl font-bebas_neue uppercase text-[#921233] md:tracking-[7px] md:leading-[80px]">
+            Authentic<br />
+            <span className="font-knewave">
+              LAHORE
+            </span><br />
+            SPECIALS<br />
+          </h1>
+          <h3 className="special-title -ml-[50px] font-inter text-xl text-[#921233] tracking-[2px] max-w-[300px]">Immerse yourself in the rich aroma of Lahori spices and flavors, and soon, you`ll feel as if you`re in the heart of Lahore</h3>
+        </div>
         {/* <p className="special-description max-w-[500px] px-2 text-center font-light leading-[160%] text-[#C1B6A6] md:px-0 md:-ml-[50px] font-jakarta">
           We bring the finest cuts of beef to Tiffin Box with a commitment to quality and sustainability. Embracing the city`s vibrant culinary heritage, each dish reflects our dedication to responsible sourcing. Experience dining that honors both our guests and the environment.
         </p> */}
@@ -102,6 +109,22 @@ const Special = ({ }) => {
             <EmblaCarousel slides={modelData} options={OPTIONS} />
           </div>
         )}
+      </div>
+      <div className="absolute w-full h-full left-0 top-0 flex justify-center items-end">
+        <div className="relative w-full flex justify-start items-start">
+          <Image
+            src='/images/home/special/bottom.png'
+            width={2160}
+            height={438}
+            alt="bottom"
+            className="w-full object-cover z-10"
+          />
+          <div className="absolute w-full left-0 top-0 h-full flex justify-start items-end">
+            <div
+              className="bg-[#673147] w-full h-[100px] left-0 bottom-0"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );

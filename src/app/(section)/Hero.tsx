@@ -1,5 +1,3 @@
-import { Button } from "@/components/ui/button";
-import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 
 const Hero = ({ }) => {
@@ -18,26 +16,17 @@ const Hero = ({ }) => {
         />
       </div>
       <div className="absolute left-0 top-0 h-full w-full overflow-hidden">
-        {/* <video
-          className="min-h-full min-w-full object-cover"
-          style={{ objectPosition: "center" }}
-          src="/videos/hero.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          poster="https://foodo-web-videos.s3.eu-west-2.amazonaws.com/nur-cafe-restaurant-thumbnail.png"
-        ></video> */}
         <Image
           src='/images/home/hero/hero.png'
           width={1728}
           height={1117}
           alt="hero"
+          className="w-full h-full object-cover"
         />
       </div>
       <div className="relative mt-14 flex min-h-[100vh] w-full flex-col items-center justify-center gap-3 px-3 md:mt-0 md:flex-row md:gap-0 md:px-[130px]">
         <div className="flex flex-col justify-center items-center gap-5 z-30">
-          <p className="text-center font-bebas_neue text-3xl leading-[60px] uppercase text-white md:text-7xl md:leading-[90px]">
+          <p className="text-center font-bebas_neue text-3xl leading-[60px] uppercase text-white md:text-8xl md:leading-[110px]">
             <span className="font-knewave tracking-normal capitalize"><span className="text-[#B0464B]">Experience</span> the</span><br />Authentic Flavors<br />
             <span className="text-[#F5AE52]">of <span className="font-crazydots">Lahore</span></span>
           </p>
