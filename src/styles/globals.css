@@ -120,26 +120,25 @@
 }
 
 @font-face {
-  font-family: 'CrazyDots';
-  src: url('/font/CrazyDots.ttf') format('truetype');
+  font-family: "CrazyDots";
+  src: url("/font/CrazyDots.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Knewave';
-  src: url('/font/Knewave.ttf') format('truetype');
+  font-family: "Knewave";
+  src: url("/font/Knewave.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'BebasNeue';
-  src: url('/font/BebasNeue.ttf') format('truetype');
+  font-family: "BebasNeue";
+  src: url("/font/BebasNeue.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
-
 
 .overflow-hidden {
   overflow: hidden;
