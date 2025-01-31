@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Instagram: React.FC = () => {
@@ -12,7 +13,9 @@ const Instagram: React.FC = () => {
           </h2>
           <div className="flex justify-end">
             <Button className="text bg-[#B0464B] px-5 py-6 font-bebas_neue text-lg font-[400] uppercase tracking-[2.px] text-[#fff] lg:px-8 lg:py-7 lg:text-2xl">
-              @lahorikarahi
+              <Link href={"https://www.instagram.com/lahorikarahi/"}>
+                @lahorikarahi
+              </Link>
             </Button>
           </div>
         </div>

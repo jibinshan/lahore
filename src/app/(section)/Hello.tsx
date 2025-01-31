@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Hello: React.FC = () => {
@@ -8,17 +9,21 @@ const Hello: React.FC = () => {
         <div className="relative">
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-16">
             <div className="flex flex-col gap-8">
-              <div className="flex flex-col gap-3">
+              <div className="flex flex-col items-center gap-3">
                 <h6 className="text-center font-bebas_neue text-xl font-[400] capitalize tracking-[1.2px] text-[#921233]">
                   Booking request
                 </h6>
-                <div>
-                  <p className="font-inter text-center text-2xl font-[700] text-[#B0464B]">
-                    +441612493919
-                  </p>
-                  <p className="font-inter text-center text-2xl font-[400] text-[#B0464B]">
-                    info@lahorimanchester.co.uk
-                  </p>
+                <div className="flex flex-col items-center">
+                  <span className="text-center font-inter text-2xl font-[700] text-[#B0464B]">
+                    <Link className="text-center" href={"tel:+441612493919"}>
+                      +441612493919
+                    </Link>
+                  </span>
+                  <span className="text-center font-inter text-2xl font-[400] text-[#B0464B]">
+                    <Link href={"mailto:info@lahorimanchester.co.uk"}>
+                      info@lahorimanchester.co.uk
+                    </Link>
+                  </span>
                 </div>
               </div>
             </div>
@@ -28,10 +33,12 @@ const Hello: React.FC = () => {
                   Location{" "}
                 </h6>
                 <div>
-                  <p className="font-inter text-center text-lg font-[400] text-[#B0464B]">
-                    824 Stockport Rd, Levenshulme, <br /> Manchester M19 3AW,
-                    United Kingdom{" "}
-                  </p>
+                  <span className="text-center font-inter text-lg font-[400] text-[#B0464B]">
+                    <Link href={"https://maps.app.goo.gl/pRH9eLWiPSh2wEYc9"}>
+                      824 Stockport Rd, Levenshulme, <br /> Manchester M19 3AW,
+                      United Kingdom{" "}
+                    </Link>
+                  </span>
                 </div>
               </div>
             </div>
@@ -41,7 +48,7 @@ const Hello: React.FC = () => {
                   Opening Hours{" "}
                 </h6>
                 <div>
-                  <p className="font-inter text-center text-lg font-[400] text-[#B0464B]">
+                  <p className="text-center font-inter text-lg font-[400] text-[#B0464B]">
                     Monday-Sunday: 1:00PM - 11:30 PM
                   </p>
                 </div>
@@ -133,10 +140,10 @@ const Hello: React.FC = () => {
                     Booking request
                   </h6>
                   <div>
-                    <p className="font-inter text-center text-base font-[700] text-[#B0464B]">
+                    <p className="text-center font-inter text-base font-[700] text-[#B0464B]">
                       +441612493919
                     </p>
-                    <p className="font-inter text-center text-base font-[400] text-[#B0464B]">
+                    <p className="text-center font-inter text-base font-[400] text-[#B0464B]">
                       info@lahorimanchester.co.uk
                     </p>
                   </div>
@@ -148,7 +155,7 @@ const Hello: React.FC = () => {
                     Location{" "}
                   </h6>
                   <div>
-                    <p className="font-inter text-center text-base font-[400] text-[#B0464B]">
+                    <p className="text-center font-inter text-base font-[400] text-[#B0464B]">
                       824 Stockport Rd, Levenshulme, <br /> Manchester M19 3AW,
                       United Kingdom{" "}
                     </p>
@@ -161,7 +168,7 @@ const Hello: React.FC = () => {
                     Opening Hours{" "}
                   </h6>
                   <div>
-                    <p className="font-inter text-center text-base font-[400] text-[#B0464B]">
+                    <p className="text-center font-inter text-base font-[400] text-[#B0464B]">
                       Monday-Sunday: 1:00PM - 11:30 PM
                     </p>
                   </div>

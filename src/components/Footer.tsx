@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { Icons } from "./Icon";
 
 const Footer: React.FC = () => {
   return (
@@ -9,20 +10,20 @@ const Footer: React.FC = () => {
         <div className="flex flex-col items-center justify-center gap-5 lg:flex-row lg:gap-40">
           <div className="flex flex-col gap-4 lg:flex-row lg:gap-28">
             <Link
-              href={"#"}
+              href={"/"}
               className="text-center font-bebas_neue text-base font-[400] uppercase tracking-[0.72px] text-[#fff] lg:text-xl"
             >
               Home
             </Link>
             <Link
-              href={"#"}
+              href={"/menu"}
               className="text-center font-bebas_neue text-base font-[400] uppercase tracking-[0.72px] text-[#fff] lg:text-xl"
             >
               Menu
             </Link>
           </div>
           <div>
-            <Link href={"#"}>
+            <Link href={"/"}>
               <Image
                 src={"/images/home/footer/logo.png"}
                 width={164}
@@ -34,13 +35,13 @@ const Footer: React.FC = () => {
           </div>
           <div className="flex flex-col gap-4 lg:flex-row lg:gap-28">
             <Link
-              href={"#"}
+              href={"/about-us"}
               className="text-center font-bebas_neue text-base font-[400] uppercase tracking-[0.72px] text-[#fff] lg:text-xl"
             >
               About
             </Link>
             <Link
-              href={"#"}
+              href={"/contact"}
               className="text-center font-bebas_neue text-base font-[400] uppercase tracking-[0.72px] text-[#fff] lg:text-xl"
             >
               Contact
@@ -48,45 +49,42 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className="flex flex-row items-center justify-center gap-2 lg:mr-[2%]">
-          <Link href={"#"}>
-            <Image
-              src={"/images/home/footer/insta.svg"}
-              width={42}
-              height={42}
-              alt="logo"
-              className="w-12"
-            />
+          <Link href={"https://www.facebook.com/Lahorikarahii/"}>
+            <Icons.facebook className="w-12 text-white" />
           </Link>
-          <Link href={"#"}>
-            <Image
-              src={"/images/home/footer/fb.svg"}
-              width={42}
-              height={42}
-              alt="logo"
-              className="w-12"
-            />
+          <Link href={"https://www.instagram.com/lahorikarahi/"}>
+            <Icons.instagram className="w-12 text-white" />
+          </Link>
+          <Link
+            href={
+              "https://www.tripadvisor.in/Restaurant_Review-g187069-d5871012-Reviews-Lahori_Karahi_Chargha-Manchester_Greater_Manchester_England.html"
+            }
+          >
+            <Icons.unknown className="w-12 text-white" />
           </Link>
         </div>
-        <div className="flex flex-col items-center gap-4 lg:mr-[4%] lg:mt-12 lg:flex-row lg:items-start lg:gap-60">
+        <div className="flex flex-col items-center gap-4 lg:mt-12 lg:flex-row lg:items-start lg:gap-60">
           <div className="flex flex-col items-center justify-center gap-4 lg:mt-3">
             <h5 className="font-bebas_neue text-lg font-[400] capitalize tracking-[2.5px] text-[#ffc43c] lg:text-xl">
               Hours of Operation
             </h5>
-            <p className="font-inter text-center text-sm font-[400] capitalize tracking-[0.44px] text-[#ECE6D6] lg:text-base">
+            <span className="text-center font-inter text-sm font-[400] capitalize tracking-[0.44px] text-[#ECE6D6] lg:text-base">
               Mon: 1:00pm-11:30pm{" "}
-            </p>
+            </span>
           </div>
           <div className="flex flex-col items-center justify-center gap-4">
             <h5 className="font-bebas_neue text-lg font-[400] capitalize tracking-[2.5px] text-[#ffc43c] lg:text-xl">
               Address{" "}
             </h5>
-            <p className="font-inter text-center text-sm font-[400] capitalize tracking-[0.44px] text-[#ECE6D6] lg:text-base">
-              824 Stockport Rd, <br /> Levenshulme, <br /> M19 3AW, United
-              Kingdom{" "}
-            </p>
-            <p className="font-inter text-center text-sm font-[400] capitalize tracking-[0.44px] text-[#ECE6D6] lg:text-base">
-              +441612493919
-            </p>
+            <span className="text-center font-inter text-sm font-[400] capitalize tracking-[0.44px] text-[#ECE6D6] lg:text-base">
+              <Link href={"https://g.co/kgs/NZz84Ya"}>
+                824 Stockport Rd, <br /> Levenshulme, <br /> M19 3AW, United
+                Kingdom{" "}
+              </Link>
+            </span>
+            <span className="text-center font-inter text-sm font-[400] capitalize tracking-[0.44px] text-[#ECE6D6] lg:text-base">
+              <Link href={"tel:+441612493919"}>+441612493919</Link>
+            </span>
           </div>
           <div className="flex flex-col items-center justify-center gap-4">
             <Image
@@ -96,7 +94,7 @@ const Footer: React.FC = () => {
               alt="logo"
               className="w-12"
             />
-            <p className="font-inter text-center text-sm font-[400] capitalize tracking-[0.44px] text-[#ECE6D6] lg:text-base">
+            <p className="text-center font-inter text-sm font-[400] capitalize tracking-[0.44px] text-[#ECE6D6] lg:text-base">
               Craving LAHORI at home? <br /> Get it delivered <br /> via{" "}
               <span className="text-[#D3AF5E]">UberEats.</span>{" "}
             </p>

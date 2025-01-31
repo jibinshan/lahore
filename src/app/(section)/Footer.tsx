@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Footer: React.FC = () => {
   return (
-    <section className="flex h-full w-full items-center justify-center bg-[#000000] px-4 py-8 lg:px-[80px] xl:px-[120px]">
+    <section className="relative z-50 flex h-full w-full items-center justify-center bg-[#000000] px-4 py-8 lg:px-[80px] xl:px-[120px]">
       <div className="flex flex-col gap-8 lg:gap-20">
         <div className="flex flex-col items-center justify-center gap-4 lg:gap-8">
           <Image
@@ -35,15 +35,17 @@ const Footer: React.FC = () => {
             Contact U
           </p>
           <p className="font-jakarta text-xs font-[400] uppercase leading-[28px] tracking-[4px] text-[#9a9a9a] lg:text-sm">
-            +447436514048
+            <Link href={"tel:+441612493919"}>+441612493919</Link>
           </p>
           {/* <p className="font-jakarta text-xs font-[400] uppercase leading-[28px] tracking-[4px] text-[#9a9a9a] lg:text-sm">
             Info@tiffinbox.co.uk
           </p> */}
-          <p className="font-jakarta text-xs font-[400] uppercase leading-[28px] tracking-[4px] text-[#9a9a9a] lg:text-sm text-center">
-            {" "}
-            7-9, The Butts, Earlsdon,<br /> Coventry CV1 3GJ
-          </p>
+          <span className="font-jakarta text-center text-xs font-[400] uppercase leading-[28px] tracking-[4px] text-[#9a9a9a] lg:text-sm">
+            <Link href={"https://g.co/kgs/NZz84Ya"}>
+              824 Stockport Rd, <br /> Levenshulme, <br /> M19 3AW, United
+              Kingdom{" "}
+            </Link>
+          </span>
         </div>
         <div className="flex flex-col gap-4 lg:flex-row">
           <div className="flex flex-row items-center justify-center gap-6">
@@ -57,7 +59,7 @@ const Footer: React.FC = () => {
           </div>
           <div className="flex flex-row items-center justify-center gap-6">
             <Link
-              href="/menu"
+              href="/our-story"
               className="font-jakarta text-xs font-[400] uppercase leading-[25px] tracking-[4px] text-[#9a9a9a] lg:pl-3"
             >
               Our Story

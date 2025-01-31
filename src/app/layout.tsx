@@ -4,11 +4,10 @@ import { type Metadata } from "next";
 import Providers from "@/app/Providers";
 
 export const metadata: Metadata = {
-  title: "Tiffin Box",
+  title: "Lahori",
   description: "lorem",
   icons: [{ rel: "icon", url: "/images/logo.png" }],
 };
-
 
 export default function RootLayout({
   children,

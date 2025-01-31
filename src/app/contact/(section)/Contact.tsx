@@ -21,7 +21,10 @@ import { z } from "zod";
 
 const FormValidation = z.object({
   name: z.string().min(1, "please enter your name"),
-  phone: z.string().min(11, "Please enter a valid phone number with 11 digits").max(11, "Please enter a valid phone number with 11 digits"),
+  phone: z
+    .string()
+    .min(11, "Please enter a valid phone number with 11 digits")
+    .max(11, "Please enter a valid phone number with 11 digits"),
   email: z.string().min(1, "please enter your email"),
   reason: z.string().min(1, "please enter reason"),
   message: z.string().optional(),
@@ -29,7 +32,7 @@ const FormValidation = z.object({
 
 type FormData = z.infer<typeof FormValidation>;
 
-const Contact = ({ }) => {
+const Contact = ({}) => {
   const form = useForm<FormData>({
     resolver: zodResolver(FormValidation),
     defaultValues: {
@@ -52,20 +55,23 @@ const Contact = ({ }) => {
     onSuccess: () => {
       toast(
         (t) => (
-          <div className="flex flex-col gap-2 items-center justify-center">
-            <p className="text-center">Your reservation request has been successfully submitted to the restaurant!</p>
+          <div className="flex flex-col items-center justify-center gap-2">
+            <p className="text-center">
+              Your reservation request has been successfully submitted to the
+              restaurant!
+            </p>
             <button
               onClick={() => {
                 toast.dismiss(t.id);
                 form.reset();
               }}
-              className="bg-primary text-white px-4 py-2 rounded"
+              className="rounded bg-primary px-4 py-2 text-white"
             >
               OK
             </button>
           </div>
         ),
-        { duration: Infinity }
+        { duration: Infinity },
       );
     },
     onError: () => {
@@ -79,14 +85,19 @@ const Contact = ({ }) => {
       <div className="flex h-full w-full flex-col gap-[2.5rem] px-0 pl-0 md:px-2">
         <div className="flex w-full flex-col lg:flex-row">
           <div
-            style={{ backgroundImage: "url(/images/contact/contact.png)", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center center" }}
+            style={{
+              backgroundImage: "url(/images/contact/contact.png)",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+              backgroundPosition: "center center",
+            }}
             className="relative flex h-screen w-full items-center justify-center lg:ml-[-10px] lg:w-1/2"
           >
-            <div className="absolute w-full h-full left-0 top-0 bg-black/50"></div>
-            <div className="h-7/12 flex md:w-7/12 flex-col gap-16 px-3 md:px-0 z-20">
+            <div className="absolute left-0 top-0 h-full w-full bg-black/50"></div>
+            <div className="h-7/12 z-20 flex flex-col gap-16 px-3 md:w-7/12 md:px-0">
               <div className="flex w-full flex-col gap-10">
                 <div className="flex w-full flex-col gap-2">
-                  <p className="font-oswald text-4xl md:text-7xl font-extralight">
+                  <p className="font-oswald text-4xl font-extralight md:text-7xl">
                     Get in touch
                   </p>
                   <p className="text-sm font-light">
@@ -94,13 +105,21 @@ const Contact = ({ }) => {
                   </p>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Link href='https://www.instagram.com/thetiffinboxuk?igsh=MTh2ZHc4aXl3Y2U4cw==' target="_blank">
+                  <Link href={"https://www.instagram.com/lahorikarahi/"}>
                     <Icons.instagram />
                   </Link>
-                  <Link href='https://www.tripadvisor.in/Restaurant_Review-g186403-d27022571-Reviews-The_Tiffin_Box-Coventry_West_Midlands_England.html' target="_blank">
+                  <Link
+                    href={
+                      "https://www.tripadvisor.in/Restaurant_Review-g187069-d5871012-Reviews-Lahori_Karahi_Chargha-Manchester_Greater_Manchester_England.html"
+                    }
+                    target="_blank"
+                  >
                     <Icons.unknown />
                   </Link>
-                  <Link href='https://www.facebook.com/share/1AygAGmSs7/' target="_blank">
+                  <Link
+                    href={"https://www.facebook.com/Lahorikarahii/"}
+                    target="_blank"
+                  >
                     <Icons.facebook />
                   </Link>
                 </div>
@@ -120,31 +139,31 @@ const Contact = ({ }) => {
                   <div className="flex flex-col gap-2">
                     <p className="flex gap-7 text-[#b3b3aa]">
                       <span>:</span>
-                      <span>12:00 - 22:30</span>
+                      <span>1:00pm - 11:30pm</span>
                     </p>
                     <p className="flex gap-7 text-[#b3b3aa]">
                       <span>:</span>
-                      <span>12:00 - 21:00</span>
+                      <span>1:00pm - 11:30pm</span>
                     </p>
                     <p className="flex gap-7 text-[#b3b3aa]">
                       <span>:</span>
-                      <span>Closed</span>
+                      <span>1:00pm - 11:30pm</span>
                     </p>
                     <p className="flex gap-7 text-[#b3b3aa]">
                       <span>:</span>
-                      <span>17:00 - 22:00</span>
+                      <span>1:00pm - 11:30pm</span>
                     </p>
                     <p className="flex gap-7 text-[#b3b3aa]">
                       <span>:</span>
-                      <span>17:00 - 22:00</span>
+                      <span>1:00pm - 11:30pm</span>
                     </p>
                     <p className="flex gap-7 text-[#b3b3aa]">
                       <span>:</span>
-                      <span>17:00 - 22:00</span>
+                      <span>1:00pm - 11:30pm</span>
                     </p>
                     <p className="flex gap-7 text-[#b3b3aa]">
                       <span>:</span>
-                      <span>12:00 - 22:30</span>
+                      <span>1:00pm - 11:30pm</span>
                     </p>
                   </div>
                 </div>
@@ -160,10 +179,11 @@ const Contact = ({ }) => {
                   </div>
                 </div>
                 <div className="flex flex-col gap-4">
-                  <p>
-                    7-9, The Butts, Earlsdon,<br /> Coventry CV1 3GJ
-                  </p>
-                  <Link href='https://maps.app.goo.gl/jELmPgqdAxuXMP5q7' target="_blank">
+                  <Link href={"https://g.co/kgs/NZz84Ya"}>
+                    824 Stockport Rd, <br /> Levenshulme, <br /> M19 3AW, United
+                    Kingdom{" "}
+                  </Link>
+                  <Link href={"https://g.co/kgs/NZz84Ya"} target="_blank">
                     <p className="flex gap-2 text-sm text-[#b3b3aa]">
                       <span>Get Direction</span>
                       <MoveRight />
@@ -178,9 +198,7 @@ const Contact = ({ }) => {
                   </div>
                 </div>
                 <div className="flex flex-col gap-4">
-                  <Link href='tel:+447436514048'>
-                    <p>+447436514048</p>
-                  </Link>
+                  <Link href={"tel:+441612493919"}>+441612493919</Link>
                 </div>
               </div>
               {/* <div className="flex items-center gap-6">
@@ -298,7 +316,7 @@ const Contact = ({ }) => {
           </div>
         </div>
       </div>
-    </section >
+    </section>
   );
 };
 

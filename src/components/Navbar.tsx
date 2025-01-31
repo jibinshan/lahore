@@ -32,42 +32,48 @@ const Navbar = ({
     >
       <div className="flex h-full w-full items-center justify-between">
         <Link href="/">
-          <Image src="/images/logo.png" width={164} height={55} alt="logo" className="h-12" />
+          <Image
+            src="/images/logo.png"
+            width={164}
+            height={55}
+            alt="logo"
+            className="h-12"
+          />
         </Link>
         {!isScrolled && (
           <div className="hidden flex-row items-center justify-center gap-[3.48rem] md:flex">
             <Button
               asChild
               variant="link"
-              className="px-0 uppercase text-accent text-lg"
+              className="px-0 text-lg uppercase text-accent"
             >
               <Link href="/menu">Order Online</Link>
             </Button>
             <Button
               asChild
               variant="link"
-              className="px-0 uppercase text-accent text-lg"
+              className="px-0 text-lg uppercase text-accent"
             >
               <Link href="/about-us">About</Link>
             </Button>
             <Button
               asChild
               variant="link"
-              className="px-0 uppercase text-accent text-lg"
+              className="px-0 text-lg uppercase text-accent"
             >
               <Link href="/our-story">Our Story</Link>
             </Button>
             <Button
               asChild
               variant="link"
-              className="px-0 uppercase text-accent text-lg"
+              className="px-0 text-lg uppercase text-accent"
             >
               <Link href="/contact">Contact</Link>
             </Button>
             <Button
               asChild
               variant="link"
-              className="px-0 uppercase text-accent text-lg"
+              className="px-0 text-lg uppercase text-accent"
             >
               <Link href="/table-booking">Booking</Link>
             </Button>
@@ -92,9 +98,9 @@ const Navbar = ({
                 <Icons.shoppingCart />
               </Button>
             </CartSheet> */}
-            <Link href='/menu'>
+            <Link href="/table-booking">
               <Button
-                className="group h-11 items-center gap-[1.19rem] rounded-md bg-[#F5AE52] uppercase text-lg font-bebas_neue font-[400] text-[#282828] hover:bg-primary group"
+                className="group h-11 items-center gap-[1.19rem] rounded-md bg-[#F5AE52] font-bebas_neue text-lg font-[400] uppercase text-[#282828] hover:bg-primary"
                 variant="secondary"
               >
                 Book A Table
